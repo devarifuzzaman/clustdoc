@@ -212,7 +212,7 @@ header {
                     align-items: center;
 
                     span {
-                        background-image: url('./assets/img/nonactive.svg');
+                        background-image: url('../img/nonactive.svg');
                         background-size: auto;
                         background-repeat: no-repeat;
                         background-position: center;
@@ -253,7 +253,7 @@ header {
                     background: var(--primary-gradient-color);
 
                     span {
-                        background-image: url('./assets/img/active.svg');
+                        background-image: url('../img/active.svg');
                         background-size: auto;
                         background-repeat: no-repeat;
                         background-position: center;
