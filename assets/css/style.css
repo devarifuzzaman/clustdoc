@@ -599,10 +599,12 @@ header {
 
                     &.active {
                         background-color: var(--medium-light-primary-color);
+
                         &:hover {
                             background-color: var(--extra-light-primary-color);
                         }
                     }
+
                     &:hover {
                         background-color: var(--medium-light-primary-color);
                     }
