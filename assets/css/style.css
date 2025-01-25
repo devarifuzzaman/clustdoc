@@ -218,6 +218,7 @@ header {
                         background-position: center;
                         width: 100%;
                         height: 100%;
+
                     }
                 }
             }
@@ -281,6 +282,7 @@ header {
     }
 }
 
+/* step-1.html  */
 
 .content-sec {
     margin-top: 20px;
@@ -454,6 +456,8 @@ header {
 }
 
 
+
+
 /* step-2.html */
 .step-2 {
     .content-area {
@@ -469,7 +473,7 @@ header {
 
                 .card {
                     display: flex;
-
+                    cursor: pointer;
                     .card-title {
                         display: flex;
                         align-items: center;
@@ -706,6 +710,7 @@ header {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    cursor: pointer;
 
                     &.gray {
                         background-color: #323646;
@@ -755,7 +760,13 @@ header {
                         background-color: #6867D2;
                     }
 
-                    span {
+                    span{
+                        display: none;
+                    
+                    }
+                   
+                    &.active > span {
+
                         width: 13px;
                         height: 13px;
                         font-size: 8px;

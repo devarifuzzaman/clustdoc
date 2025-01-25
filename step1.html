@@ -95,13 +95,15 @@
                             <p>Sélectionnez le cas d'utilisation qui correspond à vos besoins</p>
                         </div>
                         <div class="card-sec">
-                            <div class="card active">
+                            <div class="card">
                                 <div class="card-img">
                                     <img src="./assets/img/client1.jpeg" alt="card-img-1">
                                 </div>
                                 <div class="card-title ">
                                     <h3>Clients B2B</h3>
-                                    <span><i class="fa-solid fa-check"></i></span>
+                                    <span><i class="fa-solid fa-check"></i>
+                                        <input type="checkbox" hidden>
+                                    </span>
                                 </div>
                             </div>
                             <div class="card">
@@ -110,7 +112,9 @@
                                 </div>
                                 <div class="card-title">
                                     <h3>Clients B2c</h3>
-                                    <span><i class="fa-solid fa-check"></i></span>
+                                    <span><i class="fa-solid fa-check"></i>
+                                        <input type="checkbox" hidden>
+                                    </span>
                                 </div>
                             </div>
                             <div class="card">
@@ -119,7 +123,9 @@
                                 </div>
                                 <div class="card-title ">
                                     <h3>Demarches employes</h3>
-                                    <span><i class="fa-solid fa-check"></i></span>
+                                    <span><i class="fa-solid fa-check"></i>
+                                        <input type="checkbox" hidden>
+                                    </span>
                                 </div>
                             </div>
                             <div class="card">
@@ -128,7 +134,9 @@
                                 </div>
                                 <div class="card-title ">
                                     <h3>Dossiers administratifs divers</h3>
-                                    <span><i class="fa-solid fa-check"></i></span>
+                                    <span><i class="fa-solid fa-check"></i>
+                                        <input type="checkbox" hidden>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -141,6 +149,26 @@
                 </div>
     </section>
 
+
+    <script>
+        // Add event listeners to each card
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', function () {
+                // Uncheck all other checkboxes and remove active class
+                document.querySelectorAll('.card').forEach(otherCard => {
+                    const checkbox = otherCard.querySelector('input[type="checkbox"]');
+                    checkbox.checked = false;  // Uncheck the checkbox
+                    otherCard.classList.remove('active'); // Remove active class from other cards
+                });
+
+                // Check the clicked card's checkbox and add active class to it
+                const checkbox = this.querySelector('input[type="checkbox"]');
+                checkbox.checked = true; // Check the clicked card's checkbox
+                this.classList.add('active'); // Add active class to clicked card
+            });
+        });
+
+    </script>
 </body>
 
 </html>
